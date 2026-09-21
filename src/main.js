@@ -174,9 +174,25 @@ function resolveVoice(queryLang, queryText, opts) {
 
   var voiceName;
   if (locale === "cmn-CN") {
-    voiceName = (opts.chinese_voice || "cmn-CN-Chirp3-HD-Kore").trim();
+    voiceName = (opts.zh_voice || opts.chinese_voice || "cmn-CN-Chirp3-HD-Kore").trim();
   } else if (locale === "en-US") {
-    voiceName = (opts.english_voice || "en-US-Chirp3-HD-Charon").trim();
+    voiceName = (opts.en_voice || opts.english_voice || "en-US-Chirp3-HD-Charon").trim();
+  } else if (locale === "yue-HK") {
+    voiceName = (opts.yue_voice || "yue-HK-Chirp3-HD-Kore").trim();
+  } else if (locale === "ja-JP") {
+    voiceName = (opts.ja_voice || "ja-JP-Chirp3-HD-Kore").trim();
+  } else if (locale === "ko-KR") {
+    voiceName = (opts.ko_voice || "ko-KR-Chirp3-HD-Kore").trim();
+  } else if (locale === "fr-FR" || locale === "fr-CA") {
+    voiceName = (opts.fr_voice || "fr-FR-Chirp3-HD-Kore").trim();
+  } else if (locale === "de-DE") {
+    voiceName = (opts.de_voice || "de-DE-Chirp3-HD-Kore").trim();
+  } else if (locale === "es-ES" || locale === "es-US") {
+    voiceName = (opts.es_voice || "es-ES-Chirp3-HD-Kore").trim();
+  } else if (locale === "ru-RU") {
+    voiceName = (opts.ru_voice || "ru-RU-Chirp3-HD-Aoede").trim();
+  } else if (locale === "it-IT") {
+    voiceName = (opts.it_voice || "it-IT-Chirp3-HD-Kore").trim();
   } else {
     var genderPersonality = (opts.other_voice_gender || "Kore").trim();
     voiceName = locale + "-Chirp3-HD-" + genderPersonality;

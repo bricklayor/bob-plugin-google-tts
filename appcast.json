@@ -1,6 +1,13 @@
 {
   "versions": [
     {
+      "version": "1.1.0",
+      "desc": "v1.1.0: 新增主流语种（中文普通话、英语、粤语、日语、韩语、法语、德语、西班牙语、俄语、意大利语）独立音色选择配置。",
+      "sha256": "59913f36d3734c4f6b4b4dfd23510b69da550516ce4eb9df5b0d8e820dd0c60d",
+      "url": "https://github.com/bricklayor/bob-plugin-google-tts/releases/download/v1.1.0/google-tts.bobplugin",
+      "minBobVersion": "1.8.0"
+    },
+    {
       "version": "1.0.0",
       "desc": "首发版本：集成 Google Cloud Text-to-Speech API，支持 Chirp 3 高清拟真音色，具备多语种智能匹配与设置项验证功能。",
       "sha256": "d70de384f4d7250c0915a6c1089b8751d2d0f29893f5cffbbf1db7e587519e16",

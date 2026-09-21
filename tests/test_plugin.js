@@ -45,12 +45,27 @@ const enVoice = plugin.__test.resolveVoice("en", "Hello", {});
 assert.strictEqual(enVoice.languageCode, "en-US");
 assert.strictEqual(enVoice.voiceName, "en-US-Chirp3-HD-Charon");
 
-// 5.3 Japanese with personality
-const jaVoice = plugin.__test.resolveVoice("ja", "こんにちは", { other_voice_gender: "Fenrir" });
+// 5.3 Japanese custom selection
+const jaVoice = plugin.__test.resolveVoice("ja", "こんにちは", { ja_voice: "ja-JP-Chirp3-HD-Aoede" });
 assert.strictEqual(jaVoice.languageCode, "ja-JP");
-assert.strictEqual(jaVoice.voiceName, "ja-JP-Chirp3-HD-Fenrir");
+assert.strictEqual(jaVoice.voiceName, "ja-JP-Chirp3-HD-Aoede");
 
-// 5.4 Custom voice override
+// 5.4 Cantonese custom selection
+const yueVoice = plugin.__test.resolveVoice("yue", "你好", { yue_voice: "yue-HK-Chirp3-HD-Charon" });
+assert.strictEqual(yueVoice.languageCode, "yue-HK");
+assert.strictEqual(yueVoice.voiceName, "yue-HK-Chirp3-HD-Charon");
+
+// 5.5 Korean custom selection
+const koVoice = plugin.__test.resolveVoice("ko", "안녕하세요", { ko_voice: "ko-KR-Chirp3-HD-Fenrir" });
+assert.strictEqual(koVoice.languageCode, "ko-KR");
+assert.strictEqual(koVoice.voiceName, "ko-KR-Chirp3-HD-Fenrir");
+
+// 5.6 Russian default selection
+const ruVoice = plugin.__test.resolveVoice("ru", "Привет", {});
+assert.strictEqual(ruVoice.languageCode, "ru-RU");
+assert.strictEqual(ruVoice.voiceName, "ru-RU-Chirp3-HD-Aoede");
+
+// 5.7 Custom voice override
 const customVoice = plugin.__test.resolveVoice("zh-Hans", "你好", { custom_voice: "ja-JP-Chirp3-HD-Aoede" });
 assert.strictEqual(customVoice.voiceName, "ja-JP-Chirp3-HD-Aoede");
 assert.strictEqual(customVoice.languageCode, "ja-JP");

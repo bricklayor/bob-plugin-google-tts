@@ -1,9 +1,9 @@
 {
   "identifier": "com.mason.bob-plugin-google-tts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "category": "tts",
   "name": "Google TTS (Chirp 3)",
-  "summary": "基于 Google Cloud Text-to-Speech API 开发，支持 Chirp 3 高清拟真大模型音色与多语种自然朗读",
+  "summary": "基于 Google Cloud Text-to-Speech API 开发，支持 Chirp 3 高清拟真大模型音色与多主流语种独立音色定制",
   "icon": "icon.png",
   "author": "mason",
   "homepage": "https://github.com/bricklayor/bob-plugin-google-tts",
@@ -22,39 +22,159 @@
       }
     },
     {
-      "identifier": "chinese_voice",
+      "identifier": "zh_voice",
       "type": "menu",
-      "title": "中文音色 (Chinese)",
+      "title": "中文普通话音色",
       "defaultValue": "cmn-CN-Chirp3-HD-Kore",
       "menuValues": [
-        { "title": "cmn-CN-Chirp3-HD-Kore (女声 - 亲切自然 / 推荐)", "value": "cmn-CN-Chirp3-HD-Kore" },
-        { "title": "cmn-CN-Chirp3-HD-Charon (男声 - 沉稳磁性 / 推荐)", "value": "cmn-CN-Chirp3-HD-Charon" },
-        { "title": "cmn-CN-Chirp3-HD-Aoede (女声 - 清晰温和)", "value": "cmn-CN-Chirp3-HD-Aoede" },
-        { "title": "cmn-CN-Chirp3-HD-Fenrir (男声 - 浑厚有力)", "value": "cmn-CN-Chirp3-HD-Fenrir" },
-        { "title": "cmn-CN-Chirp3-HD-Puck (男声 - 活泼生动)", "value": "cmn-CN-Chirp3-HD-Puck" },
-        { "title": "cmn-CN-Chirp3-HD-Leda (女声 - 知性优雅)", "value": "cmn-CN-Chirp3-HD-Leda" }
+        { "title": "Kore (女声 - 亲切自然 / 推荐)", "value": "cmn-CN-Chirp3-HD-Kore" },
+        { "title": "Charon (男声 - 沉稳磁性 / 推荐)", "value": "cmn-CN-Chirp3-HD-Charon" },
+        { "title": "Aoede (女声 - 清晰温和)", "value": "cmn-CN-Chirp3-HD-Aoede" },
+        { "title": "Fenrir (男声 - 浑厚有力)", "value": "cmn-CN-Chirp3-HD-Fenrir" },
+        { "title": "Puck (男声 - 活泼生动)", "value": "cmn-CN-Chirp3-HD-Puck" },
+        { "title": "Leda (女声 - 知性优雅)", "value": "cmn-CN-Chirp3-HD-Leda" }
       ],
-      "desc": "朗读中文文本（普通话）时使用的 Chirp 3 HD 发音人音色"
+      "desc": "朗读中文简体/繁体普通话文本时使用的 Chirp 3 HD 音色"
     },
     {
-      "identifier": "english_voice",
+      "identifier": "en_voice",
       "type": "menu",
-      "title": "英文音色 (English)",
+      "title": "英语音色",
       "defaultValue": "en-US-Chirp3-HD-Charon",
       "menuValues": [
-        { "title": "en-US-Chirp3-HD-Charon (男声 - 专业沉稳 / 推荐)", "value": "en-US-Chirp3-HD-Charon" },
-        { "title": "en-US-Chirp3-HD-Kore (女声 - 自然生动 / 推荐)", "value": "en-US-Chirp3-HD-Kore" },
-        { "title": "en-US-Chirp3-HD-Aoede (女声 - 清澈温和)", "value": "en-US-Chirp3-HD-Aoede" },
-        { "title": "en-US-Chirp3-HD-Fenrir (男声 - 浑厚质感)", "value": "en-US-Chirp3-HD-Fenrir" },
-        { "title": "en-US-Chirp3-HD-Puck (男声 - 热情生动)", "value": "en-US-Chirp3-HD-Puck" },
-        { "title": "en-US-Chirp3-HD-Leda (女声 - 典雅自然)", "value": "en-US-Chirp3-HD-Leda" }
+        { "title": "Charon (男声 - 专业沉稳 / 推荐)", "value": "en-US-Chirp3-HD-Charon" },
+        { "title": "Kore (女声 - 自然生动 / 推荐)", "value": "en-US-Chirp3-HD-Kore" },
+        { "title": "Aoede (女声 - 清澈温和)", "value": "en-US-Chirp3-HD-Aoede" },
+        { "title": "Fenrir (男声 - 浑厚质感)", "value": "en-US-Chirp3-HD-Fenrir" },
+        { "title": "Puck (男声 - 热情生动)", "value": "en-US-Chirp3-HD-Puck" },
+        { "title": "Leda (女声 - 典雅自然)", "value": "en-US-Chirp3-HD-Leda" }
       ],
-      "desc": "朗读英文文本时使用的 Chirp 3 HD 发音人音色"
+      "desc": "朗读英文文本时使用的 Chirp 3 HD 音色"
+    },
+    {
+      "identifier": "yue_voice",
+      "type": "menu",
+      "title": "粤语音色",
+      "defaultValue": "yue-HK-Chirp3-HD-Kore",
+      "menuValues": [
+        { "title": "Kore (女声 - 自然亲切 / 推荐)", "value": "yue-HK-Chirp3-HD-Kore" },
+        { "title": "Charon (男声 - 沉稳磁性 / 推荐)", "value": "yue-HK-Chirp3-HD-Charon" },
+        { "title": "Aoede (女声 - 清晰明亮)", "value": "yue-HK-Chirp3-HD-Aoede" },
+        { "title": "Fenrir (男声 - 浑厚质感)", "value": "yue-HK-Chirp3-HD-Fenrir" },
+        { "title": "Puck (男声 - 活泼灵动)", "value": "yue-HK-Chirp3-HD-Puck" },
+        { "title": "Leda (女声 - 知性温和)", "value": "yue-HK-Chirp3-HD-Leda" }
+      ],
+      "desc": "朗读粤语文本时使用的 Chirp 3 HD 音色"
+    },
+    {
+      "identifier": "ja_voice",
+      "type": "menu",
+      "title": "日语音色",
+      "defaultValue": "ja-JP-Chirp3-HD-Kore",
+      "menuValues": [
+        { "title": "Kore (女声 - 柔和自然 / 推荐)", "value": "ja-JP-Chirp3-HD-Kore" },
+        { "title": "Charon (男声 - 沉着厚重 / 推荐)", "value": "ja-JP-Chirp3-HD-Charon" },
+        { "title": "Aoede (女声 - 清新明朗)", "value": "ja-JP-Chirp3-HD-Aoede" },
+        { "title": "Fenrir (男声 - 磁性低沉)", "value": "ja-JP-Chirp3-HD-Fenrir" },
+        { "title": "Puck (男声 - 活力少年)", "value": "ja-JP-Chirp3-HD-Puck" },
+        { "title": "Leda (女声 - 优雅温婉)", "value": "ja-JP-Chirp3-HD-Leda" }
+      ],
+      "desc": "朗读日语文本时使用的 Chirp 3 HD 音色"
+    },
+    {
+      "identifier": "ko_voice",
+      "type": "menu",
+      "title": "韩语音色",
+      "defaultValue": "ko-KR-Chirp3-HD-Kore",
+      "menuValues": [
+        { "title": "Kore (女声 - 清澈自然 / 推荐)", "value": "ko-KR-Chirp3-HD-Kore" },
+        { "title": "Charon (男声 - 沉稳温和 / 推荐)", "value": "ko-KR-Chirp3-HD-Charon" },
+        { "title": "Aoede (女声 - 甜美清晰)", "value": "ko-KR-Chirp3-HD-Aoede" },
+        { "title": "Fenrir (男声 - 浑厚磁性)", "value": "ko-KR-Chirp3-HD-Fenrir" },
+        { "title": "Puck (男声 - 热情生动)", "value": "ko-KR-Chirp3-HD-Puck" },
+        { "title": "Leda (女声 - 知性优雅)", "value": "ko-KR-Chirp3-HD-Leda" }
+      ],
+      "desc": "朗读韩语文本时使用的 Chirp 3 HD 音色"
+    },
+    {
+      "identifier": "fr_voice",
+      "type": "menu",
+      "title": "法语音色",
+      "defaultValue": "fr-FR-Chirp3-HD-Kore",
+      "menuValues": [
+        { "title": "Kore (女声 - 优雅自然 / 推荐)", "value": "fr-FR-Chirp3-HD-Kore" },
+        { "title": "Charon (男声 - 浪漫深沉 / 推荐)", "value": "fr-FR-Chirp3-HD-Charon" },
+        { "title": "Aoede (女声 - 清澈纯正)", "value": "fr-FR-Chirp3-HD-Aoede" },
+        { "title": "Fenrir (男声 - 浑厚质感)", "value": "fr-FR-Chirp3-HD-Fenrir" },
+        { "title": "Puck (男声 - 热情流畅)", "value": "fr-FR-Chirp3-HD-Puck" },
+        { "title": "Leda (女声 - 知性端庄)", "value": "fr-FR-Chirp3-HD-Leda" }
+      ],
+      "desc": "朗读法语文本时使用的 Chirp 3 HD 音色"
+    },
+    {
+      "identifier": "de_voice",
+      "type": "menu",
+      "title": "德语音色",
+      "defaultValue": "de-DE-Chirp3-HD-Kore",
+      "menuValues": [
+        { "title": "Kore (女声 - 自然严谨 / 推荐)", "value": "de-DE-Chirp3-HD-Kore" },
+        { "title": "Charon (男声 - 沉稳有力 / 推荐)", "value": "de-DE-Chirp3-HD-Charon" },
+        { "title": "Aoede (女声 - 清晰温和)", "value": "de-DE-Chirp3-HD-Aoede" },
+        { "title": "Fenrir (男声 - 浑厚厚重)", "value": "de-DE-Chirp3-HD-Fenrir" },
+        { "title": "Puck (男声 - 活泼生动)", "value": "de-DE-Chirp3-HD-Puck" },
+        { "title": "Leda (女声 - 典雅从容)", "value": "de-DE-Chirp3-HD-Leda" }
+      ],
+      "desc": "朗读德语文本时使用的 Chirp 3 HD 音色"
+    },
+    {
+      "identifier": "es_voice",
+      "type": "menu",
+      "title": "西班牙语音色",
+      "defaultValue": "es-ES-Chirp3-HD-Kore",
+      "menuValues": [
+        { "title": "Kore (女声 - 热情自然 / 推荐)", "value": "es-ES-Chirp3-HD-Kore" },
+        { "title": "Charon (男声 - 沉稳磁性 / 推荐)", "value": "es-ES-Chirp3-HD-Charon" },
+        { "title": "Aoede (女声 - 清晰明亮)", "value": "es-ES-Chirp3-HD-Aoede" },
+        { "title": "Fenrir (男声 - 浑厚有力)", "value": "es-ES-Chirp3-HD-Fenrir" },
+        { "title": "Puck (男声 - 活力生动)", "value": "es-ES-Chirp3-HD-Puck" },
+        { "title": "Leda (女声 - 知性优雅)", "value": "es-ES-Chirp3-HD-Leda" }
+      ],
+      "desc": "朗读西班牙语文本时使用的 Chirp 3 HD 音色"
+    },
+    {
+      "identifier": "ru_voice",
+      "type": "menu",
+      "title": "俄语音色",
+      "defaultValue": "ru-RU-Chirp3-HD-Aoede",
+      "menuValues": [
+        { "title": "Aoede (女声 - 清澈纯正 / 推荐)", "value": "ru-RU-Chirp3-HD-Aoede" },
+        { "title": "Charon (男声 - 沉稳深沉 / 推荐)", "value": "ru-RU-Chirp3-HD-Charon" },
+        { "title": "Kore (女声 - 温和自然)", "value": "ru-RU-Chirp3-HD-Kore" },
+        { "title": "Fenrir (男声 - 浑厚有力)", "value": "ru-RU-Chirp3-HD-Fenrir" },
+        { "title": "Puck (男声 - 活泼生动)", "value": "ru-RU-Chirp3-HD-Puck" },
+        { "title": "Leda (女声 - 典雅知性)", "value": "ru-RU-Chirp3-HD-Leda" }
+      ],
+      "desc": "朗读俄语文本时使用的 Chirp 3 HD 音色"
+    },
+    {
+      "identifier": "it_voice",
+      "type": "menu",
+      "title": "意大利语音色",
+      "defaultValue": "it-IT-Chirp3-HD-Kore",
+      "menuValues": [
+        { "title": "Kore (女声 - 明朗自然 / 推荐)", "value": "it-IT-Chirp3-HD-Kore" },
+        { "title": "Charon (男声 - 磁性富有感染力 / 推荐)", "value": "it-IT-Chirp3-HD-Charon" },
+        { "title": "Aoede (女声 - 清新温和)", "value": "it-IT-Chirp3-HD-Aoede" },
+        { "title": "Fenrir (男声 - 浑厚厚重)", "value": "it-IT-Chirp3-HD-Fenrir" },
+        { "title": "Puck (男声 - 热情生动)", "value": "it-IT-Chirp3-HD-Puck" },
+        { "title": "Leda (女声 - 优雅典雅)", "value": "it-IT-Chirp3-HD-Leda" }
+      ],
+      "desc": "朗读意大利语文本时使用的 Chirp 3 HD 音色"
     },
     {
       "identifier": "other_voice_gender",
       "type": "menu",
-      "title": "其他语种性格匹配",
+      "title": "其它未列出语种默认性格",
       "defaultValue": "Kore",
       "menuValues": [
         { "title": "Kore (女声 - 自然通用 / 推荐)", "value": "Kore" },
@@ -64,17 +184,17 @@
         { "title": "Puck (男声 - 活泼生动)", "value": "Puck" },
         { "title": "Leda (女声 - 知性温和)", "value": "Leda" }
       ],
-      "desc": "朗读日、韩、法、德、西、俄等其他 50 余种语言时，默认匹配的 Chirp 3 HD 统一音色角色"
+      "desc": "朗读阿拉伯语、泰语、越南语、印地语、波兰语等其余 40 余种语言时默认匹配的统一音色角色"
     },
     {
       "identifier": "custom_voice",
       "type": "text",
-      "title": "自定义音色 (可选)",
+      "title": "全局强制音色 (可选)",
       "defaultValue": "",
-      "desc": "若填写具体的 Voice Name（例如 ja-JP-Chirp3-HD-Kore 或 Journey / Neural2 音色），将强制优先使用此音色；留空则按语言智能匹配",
+      "desc": "若在此填入具体的 Voice Name（如 Journey 或特定音色），将无视所有语种设置强制使用此音色；留空按上方语种智能匹配",
       "textConfig": {
         "type": "visible",
-        "placeholderText": "例如 ja-JP-Chirp3-HD-Kore（留空按语种自动匹配）"
+        "placeholderText": "例如 en-US-Journey-D（留空按上方语种选择匹配）"
       }
     },
     {

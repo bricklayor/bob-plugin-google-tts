@@ -56,10 +56,18 @@
 | 配置项 | 默认值 | 说明 |
 |---|---|---|
 | **API Key** | 空 | 必填。你的 Google Cloud API 密钥（需启用 Cloud Text-to-Speech API）。 |
-| **中文音色 (Chinese)** | `cmn-CN-Chirp3-HD-Kore` | 朗读中文普通话时使用的发音人（Kore 女声、Charon 男声等）。 |
-| **英文音色 (English)** | `en-US-Chirp3-HD-Charon` | 朗读英文文本时使用的发音人。 |
-| **其他语种性格匹配** | `Kore` | 朗读日、韩、德、法等其他语言时默认匹配的统一人格角色。 |
-| **自定义音色 (可选)** | 空 | 强行覆盖音色（如填入 `ja-JP-Chirp3-HD-Kore`），留空则智能匹配。 |
+| **中文普通话音色** | `cmn-CN-Chirp3-HD-Kore` | 朗读中文普通话发音人（Kore 女声、Charon 男声、Aoede、Fenrir 等）。 |
+| **英语音色** | `en-US-Chirp3-HD-Charon` | 朗读英语文本发音人（Charon 专业沉稳男声、Kore 自然女声等）。 |
+| **粤语音色** | `yue-HK-Chirp3-HD-Kore` | 朗读粤语（香港）发音人（Kore 女声、Charon 男声等）。 |
+| **日语音色** | `ja-JP-Chirp3-HD-Kore` | 朗读日语文本发音人（Kore 柔和女声、Charon 磁性男声等）。 |
+| **韩语音色** | `ko-KR-Chirp3-HD-Kore` | 朗读韩语文本发音人（Kore 清澈女声、Charon 沉稳男声等）。 |
+| **法语音色** | `fr-FR-Chirp3-HD-Kore` | 朗读法语文本发音人。 |
+| **德语音色** | `de-DE-Chirp3-HD-Kore` | 朗读德语文本发音人。 |
+| **西班牙语音色** | `es-ES-Chirp3-HD-Kore` | 朗读西班牙语文本发音人。 |
+| **俄语音色** | `ru-RU-Chirp3-HD-Aoede` | 朗读俄语文本发音人。 |
+| **意大利语音色** | `it-IT-Chirp3-HD-Kore` | 朗读意大利语文本发音人。 |
+| **其它语种默认性格** | `Kore` | 朗读阿拉伯语、泰语、越南语等其余 40 余种语言时默认匹配的统一人格角色。 |
+| **全局强制音色 (可选)** | 空 | 强行覆盖所有语种音色（如填入 `en-US-Journey-D`），留空按上方语种智能匹配。 |
 | **音频编码格式** | `MP3` | MP3（推荐） / OGG_OPUS / LINEAR16。 |
 | **自定义 API 地址 / 反代** | 空 | 留空默认使用官方 `https://texttospeech.googleapis.com`。 |
 
