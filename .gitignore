@@ -1,0 +1,11 @@
+.DS_Store
+.agents/
+skills-lock.json
+*.log
+*.tmp
+.env
+.env.*
+node_modules/
+.idea/
+.vscode/
+tmp/
